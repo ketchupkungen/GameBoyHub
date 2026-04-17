@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="GameBoyHub.App/GameBoyHub.App.csproj" />
+  <Project Path="GameBoyHub.Core/GameBoyHub.Core.csproj" Id="e73092ac-1621-4bae-84de-a03b065c4a0f" />
+  <Project Path="GameBoyHub.Games.Snake/GameBoyHub.Games.Snake.csproj" Id="c945c600-fc52-4295-aebe-65821f71a968" />
+</Solution>

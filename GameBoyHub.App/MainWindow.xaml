@@ -1,0 +1,35 @@
+﻿<Window x:Class="GameBoyHub.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="GameBoy Hub"
+        Height="700"
+        Width="1000"
+        Background="#202020">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Left -->
+        <Border Background="#2D2D2D" Padding="16">
+            <StackPanel>
+                <TextBlock Text="GameBoy Hub"
+                           FontSize="22"
+                           Foreground="White"
+                           Margin="0,0,0,20"/>
+
+                <ListBox x:Name="GamesList"
+                         DisplayMemberPath="Title"
+                         SelectionChanged="GamesList_SelectionChanged"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Right -->
+        <Grid Grid.Column="1">
+            <ContentControl x:Name="GameHost"/>
+        </Grid>
+    </Grid>
+
+</Window>
