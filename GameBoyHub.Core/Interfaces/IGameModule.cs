@@ -6,6 +6,7 @@
 /// </summary>
 
 using System.Windows;
+using System.Windows.Controls;
 
 namespace GameBoyHub.Core.Interfaces;
 
@@ -30,4 +31,12 @@ public interface IGameModule
     /// The host is responsible for placing this element into the visual tree.
     /// </summary>
     FrameworkElement CreateView();
+
+    /// <summary>
+    /// Creates a Menu control specific to this game. The host will place the
+    /// returned Menu into the game's window chrome. The view parameter is the
+    /// FrameworkElement produced by CreateView and can be used to wire menu
+    /// commands to the view.
+    /// </summary>
+    Menu? CreateMenu(FrameworkElement view);
 }

@@ -7,12 +7,6 @@
         Background="#202020">
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-
-        <!-- Left -->
         <Border Background="#2D2D2D" Padding="16">
             <StackPanel>
                 <TextBlock Text="GameBoy Hub"
@@ -20,16 +14,15 @@
                            Foreground="White"
                            Margin="0,0,0,20"/>
 
+                <TextBlock Text="Double-click a game to open it in its own window"
+                           Foreground="#C7D2FE"
+                           Margin="0,0,0,8"/>
+
                 <ListBox x:Name="GamesList"
                          DisplayMemberPath="Title"
-                         SelectionChanged="GamesList_SelectionChanged"/>
+                         MouseDoubleClick="GamesList_MouseDoubleClick"/>
             </StackPanel>
         </Border>
-
-        <!-- Right -->
-        <Grid Grid.Column="1">
-            <ContentControl x:Name="GameHost"/>
-        </Grid>
     </Grid>
 
 </Window>

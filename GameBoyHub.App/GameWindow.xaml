@@ -1,0 +1,16 @@
+<Window x:Class="GameBoyHub.App.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Game"
+        Height="700"
+        Width="900"
+        Background="#181818"
+        WindowStartupLocation="CenterOwner"
+        ShowActivated="True">
+    <DockPanel>
+        <!-- Menu will be injected programmatically to allow modules to supply their own menu -->
+        <ContentControl x:Name="MenuHost" DockPanel.Dock="Top" />
+
+        <ContentControl x:Name="GameHost" />
+    </DockPanel>
+</Window>

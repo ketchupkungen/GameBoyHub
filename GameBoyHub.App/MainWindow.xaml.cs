@@ -33,15 +33,14 @@ public partial class MainWindow : Window
         GamesList.ItemsSource = _games;
     }
 
-    /// <summary>
-    /// Handles changes to the selection in the games list. When the user selects
-    /// a game module, its view is created and displayed in the GameHost region.
-    /// </summary>
-    private void GamesList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+    // Open the selected game in its own window when the user double-clicks an entry.
+    private void GamesList_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
         if (GamesList.SelectedItem is IGameModule game)
         {
-            GameHost.Content = game.CreateView();
+            var gameWindow = new GameWindow(game);
+            gameWindow.Title = game.Title;
+            gameWindow.Show();
         }
     }
 }

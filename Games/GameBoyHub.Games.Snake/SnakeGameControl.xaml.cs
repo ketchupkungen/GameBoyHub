@@ -57,7 +57,7 @@ public partial class SnakeGameControl : UserControl
     // Expose a few simple methods so menus or external hosts can control the game.
     public void StartGame()
     {
-        // If the start panel is visible, hide it and start a new game; otherwise just start.
+n        // If the start panel is visible, hide it and start a new game; otherwise just start.
         StartPanel.Visibility = Visibility.Collapsed;
         StartNewGame();
         Focus();
@@ -531,5 +531,4 @@ public partial class SnakeGameControl : UserControl
             return null;
         }
     }
-
 }
